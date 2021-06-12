@@ -1,25 +1,26 @@
 <template>
   <div id="leftmenu">
-      <p ><a class="leftmenu__link" href="/dashboard">Dashboard</a></p>
-      <p ><a class="leftmenu__link" href="">Articles</a></p>
-      <p ><a class="leftmenu__link" href="">Products</a></p>
-     
-
+      <router-link class="leftmenu__link" v-if="sucess" to="/dashboard">Dashboard</router-link>
+      <router-link class="leftmenu__link" v-if="sucess" to="/articles">Articles</router-link>
+      <router-link class="leftmenu__link" v-if="sucess" to="/products">Products</router-link>
   </div>
 </template>
 
 <script>
 export default {
     name: 'Leftmenu',
-    data: {
+    data () {
+        return{
+            sucess: true,
+        }
     }
 
 }
 </script>
 
-<style >
+<style>
     #leftmenu{
-        background: royalblue;
+        background: rgb(150, 151, 153);
         position: absolute;
         left: 0%;
         right: 85%;
@@ -28,6 +29,9 @@ export default {
         border: 1px solid #EBE9F1;
     }
     .leftmenu__link{
+        display: flex;
+        flex-wrap: wrap;
         text-decoration: none;
+        margin: 10px;
     }
 </style>

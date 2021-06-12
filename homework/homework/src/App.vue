@@ -18,9 +18,9 @@
   </div>
 </template>
 <script>
-import Leftmenu from './components/Leftmenu.vue'
-
+import Leftmenu from './components/Leftmenu.vue';
 export default {
+  
   components: { Leftmenu},
   name: 'App',
 }

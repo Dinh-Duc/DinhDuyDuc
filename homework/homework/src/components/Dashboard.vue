@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <h1>Home page</h1>
+    <h1>{{msg}}</h1>
   </div>
 </template>
 <script>

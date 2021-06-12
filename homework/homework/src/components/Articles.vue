@@ -1,6 +1,6 @@
 <template>
-  <div class="products">
-      <p>Products</p>
+  <div class="articles">
+      Articles
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-.products{
+.articles{
   position: absolute;
   width: 1092px;
   height: 1166px;

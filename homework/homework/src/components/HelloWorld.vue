@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <router-link v-if="authenticated" to="/login">Login</router-link>
     <ul>
       <li>
         <a
@@ -85,9 +86,11 @@
 
 <script>
 export default {
+  
   name: 'HelloWorld',
   data () {
     return {
+      authenticated: true,
       msg: 'Welcome to Your Vue.js App'
     }
   }
