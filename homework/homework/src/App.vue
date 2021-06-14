@@ -2,14 +2,9 @@
   <div id="app">
     <div class="nav-bar">
       <div id="nav-bar__link">
-      <span>Home</span>
-      <span>Blog</span>
-      <span>Service</span>
-      <span>Contact</span>
+      <span>Trang chủ</span>
       </div>
-      <div id="nav-bar__admin">
-      <span>Văn thư bộ</span>
-      </div>
+    <router-link v-if="authenticated" to="/login">Login</router-link>
     </div>
     <div class="leftmenu">
           <Leftmenu />
@@ -23,6 +18,11 @@ export default {
   
   components: { Leftmenu},
   name: 'App',
+  data(){
+    return{
+      authenticated: true,
+    }
+  }
 }
 </script>
 
